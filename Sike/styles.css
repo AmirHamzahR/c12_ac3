@@ -6,6 +6,22 @@
     Berkeley Blue: #1D3557
 */
 
+:root {
+    --red: #E63946;
+    --honeydew: #F1FAEE;
+    --npb: #A8DADC;
+    --ceru: #457B9D;
+    --bb: #1D3557;
+    --primary-color: white;
+    --secondary-color: black;
+    
+}
+
+.dark-theme {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
 /*for colors*/
 .red {
     color: #E63946;
@@ -76,6 +92,11 @@ h3 {
     opacity: 30%;
 }
 
+#dark-icon {
+    margin-left: 10px;
+    width: 40px;
+}
+
 /* nav bar */
 #nike-logo {
     width: 100px;
@@ -84,7 +105,7 @@ h3 {
     margin-left: 20px;
     justify-content: start;
     align-items: start;
-    transform: scaleX(-1); /* flip */
+    transform: scaleX(-1); 
 }
 
 #nike-logo:hover {
@@ -99,7 +120,7 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: var(--secondary-color);
     padding: 0px;
 }
 
@@ -116,7 +137,7 @@ h3 {
 
 .nav-button:hover {
     padding-bottom: 3px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 
@@ -184,7 +205,7 @@ h3 {
     display: inherit;
     align-items: center;
     border-radius: 30px;
-    background: black;
+    background: var(--secondary-color);
     color: #fff;
 }
 
@@ -193,7 +214,7 @@ h3 {
 }
 
 #second-banner {
-    background: white;
+    background: var(--primary-color);
     padding: 40px;
 }
 
@@ -204,20 +225,57 @@ h3 {
 
 /* best sellers */
 #best-sellers-title{
-    text-align:30%;
+    text-align:center;
+    font-size: xx-large;
+    font-family: 'Futura LT', sans-serif; 
+    background-color: #E63946;
+}
+#para{
+    text-align:center;
+    font-size: x-large;
+    font-family: 'Futura LT', sans-serif; 
+}
+
+#explore{
+    text-align:center;
+    font-size: x-large;
+    font-family: 'Futura LT', sans-serif; 
+    color:#1D3557;
+}
+
+#explore:hover {
+    position: relative;
+    top: -5px; 
 }
 
 .best-sellers {
-    display: inline-block;
-    margin-right: 15%;
+    text-align: center;
+    flex-direction: row;
+    font-family: 'Futura LT', sans-serif;
 }
 
 .best-sellers-img {
-    height:250px;
     transform: scaleX(-1); /* flip */
-    display: inline-block;
+    list-style-type: none;
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.product-name {
+    text-align: center;
+    
+}
+
+.reverse {
+    text-align: center;
+    
+    transform: scaleX(-1); /* flip */
+}
+
+.fixed-height {
+    height:400px;
 }
 #shoes { 
     transform: scaleX(-1);
@@ -226,33 +284,168 @@ h3 {
 
 /* Collab section */
 
-.collab{
-    display: inline-block;
-    margin-right: 20%;
-    
+/* maybe can add flex wrap? */
+.collab-pictures {
+    text-align: center;
+    white-space: nowrap; 
+    margin: 80px 0; 
 }
 
-.collab-pictures-people {
-    display: flex;
+.collab-pictures li{
+    display: inline-block;
+    width: 30%;
+    margin: 30;
+    object-fit: cover;
+}
+
+.collab-pictures li:hover {
+    position: relative;
+    top: -5px; 
 }
 
 .collab-pictures {
-    width: 8%;
-    display: inline-block;
-    flex-direction: row;
-    justify-content: center;;
+    max-width: 100%;
+    justify-content: space-evenly;
     
 }
 
+
+
+
+.caption {
+    text-align: center;
+    background-color: #457B9D; 
+    color: var(--primary-color);
+   
+}
+
+.caption-2 {
+    font-family: 'Futura LT', sans-serif; 
+    text-align: center;
+}
+
+/* Download Our App */
+.download-app {
+    width: 100%;
+    min-height: 50vh;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download-app h2{
+    font-size: 45px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.download-app p {
+    font-size: 19px;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.download-app a {
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 19px;
+    display: inline-block;
+    letter-spacing: 2px;
+    padding: 12px 20px;
+    background-color: #5d88d5;
+    border-radius: 5px;
+    color: #fff;
+}   
+
+.download-app a:hover {
+    background-color: #2d88d5;
+}
 
 /* Mailing List */
 
 .container{
+    background: var(--honeydew);
+    background-size: cover;
     margin: 0;
     padding: 0; 
+    text-align: center;
     font-family: "montserrat", sans-serif;
-    background: ;
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+        
+    }
+.container p {
+    max-width: 800px;
+    margin: 40px auto;
+    font-size: 60 px;
+    font-weight: 300;
 }
 
+.email-box{
+    height: 60 px;
+    display: flex;
+    justify-content: center;
+    
+}
 
+.email-box i{
+    background: #1D3557; 
+    height: 60 px;
+    line-height: 60px;
 
+}
+
+.tbox,.btn{
+    border: none;
+    outline: none;
+}
+
+.tbox{
+    width: 0px;
+    transition: 0.6s;
+}
+
+.email-box:hover > .tbox,.tbox:focus{
+    width: 260px;
+    padding: 0 10x;
+
+}
+.btn{
+    background: #1D3557;
+    color: var(--primary-color);
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    opacity: 80%;
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* address */
+
+address {
+    text-align: center;
+    background-color: #A8DADC;
+    color: grey;
+}
