@@ -3,6 +3,7 @@
 
 # SIKE UK Website Project
 ![](Sike/images/SikePreview.gif)
+
 Welcome to the SIKE UK website project for the Bright Network that was built in two days by 4 excellent group members! This README offers an overview of the project's structure, features, and styling considerations.
 
 ## Overview
